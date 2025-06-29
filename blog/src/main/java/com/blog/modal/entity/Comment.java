@@ -1,4 +1,4 @@
-package com.blog.entity;
+package com.blog.modal.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 public class Comment{
         private String commentId;
         private String userId;
-        private String userName;
+        private String username;
         private String content;
-        private LocalDateTime createdAt;
+        private LocalDateTime createdDate;
 }
 

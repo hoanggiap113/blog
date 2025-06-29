@@ -1,15 +1,17 @@
-package com.blog.entity;
+package com.blog.modal.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 import java.time.LocalDateTime;
 
+@Builder
 @Getter
 @Setter
-@Document(collection="posts")
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection="Post")
 public class Post {
     @Id
     private String id;
@@ -17,6 +19,7 @@ public class Post {
     private String content;
     private String authorId;
     private String authorName;
+    private List<String> tags;
     private LocalDateTime createdAt;
     private String category;
     private List<Comment> comments;
