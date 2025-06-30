@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection="Post")
+@Document(collection="posts")
 public class Post {
     @Id
     private String id;

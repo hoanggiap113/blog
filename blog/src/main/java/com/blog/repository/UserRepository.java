@@ -2,9 +2,10 @@ package com.blog.repository;
 
 import com.blog.modal.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
-
-public interface UserRepositry extends MongoRepository<User,String> {
-    User findByUsername(String username);
+import java.util.Optional;
+public interface UserRepository extends MongoRepository<User,String> {
+    Optional<User> findByUsername(String username);
     boolean existsByUsername(String username);
     boolean existsByEmail(String email);
+    Optional<User> findByEmail(String email);
 }
